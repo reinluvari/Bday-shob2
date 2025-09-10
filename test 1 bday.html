@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Shob!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-top: 50px;
+            text-shadow: 3px 3px 5px #000;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .cake {
+            margin: 50px auto;
+            width: 150px;
+            height: 200px; /* Reduced height */
+            background: #ffcc00;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .cake::before {
+            content: '';
+            position: absolute;
+            top: -40px; /* Adjusted position */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px; /* Reduced size */
+            height: 50px;
+            background: #ff6f61;
+            border-radius: 50%;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .candles {
+            position: absolute;
+            top: -60px; /* Adjusted position */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px; /* Reduced gap */
+        }
+
+        .candle {
+            width: 8px; /* Reduced width */
+            height: 30px; /* Reduced height */
+            background: #fff;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .candle::before {
+            content: '';
+            position: absolute;
+            top: -8px; /* Adjusted position */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px; /* Reduced size */
+            height: 8px;
+            background: #ff6f61;
+            border-radius: 50%;
+            box-shadow: 0 0 10px 5px #ff6f61;
+            animation: flicker 0.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        .message {
+            font-size: 1.5em;
+            margin-top: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            animation: confettiFall 5s linear infinite;
+        }
+
+        @keyframes confettiFall {
+            0% { transform: translateY(-100px) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        .confetti:nth-child(odd) {
+            background: #ff6f61;
+        }
+
+        .confetti:nth-child(even) {
+            background: #ffcc00;
+        }
+
+        .person {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .person img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .person h2 {
+            font-size: 2em;
+            margin-top: 10px;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Happy Birthday Shob! 🎉</h1>
+    <div class="cake">
+        <div class="candles">
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+        </div>
+    </div>
+    <div class="message">Happy Birthday Shob, I wish you the best of luck to your academic run and I really appreciate your effort on the birthday letter/canva specially the iris 🎂</div>
+
+    <div class="person">
+        <img src="C:\Users\CLIENT\Desktop\G\shob.jfif" alt="Shob">
+        <h2>Happy Birthday, Shob!</h2>
+    </div>
+
+    <!-- Confetti -->
+    <script>
+        for (let i = 0; i < 100; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = `${Math.random() * 100}vw`;
+            confetti.style.animationDelay = `${Math.random() * 5}s`;
+            document.body.appendChild(confetti);
+        }
+    </script>
+</body>
+</html>
